@@ -6,4 +6,5 @@ console.log(name + repocount+ " repos" )
 // never use above syntax for concatination 
 
 // always use backtricks ``
-conslo
+console.log(`hello my is ${name} and i have ${repocount} reposetry `);
+
