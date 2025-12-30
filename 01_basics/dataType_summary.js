@@ -57,3 +57,33 @@ console.log(typeof fuckyou) // typeof is undefine
 // if you want to read its documentation 
 //// https://262.ecma-international.org/5.1/#sec-11.4.3
 
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+// back in time memory control is verymuch in the hands of coder where to provide memory how much to and also vacent it but now things are changed 
+
+//So there are two types of memory 
+
+//stack(primitive): all the primitive type data is store in this and we get copy of data whiel we are acces them 
+//we get it as value not refrence  
+
+let myName="pream"
+let newName=myName
+newName="aditya"
+console.log(myName)   // pream
+console.log(newName)  // aditya   
+// because of the copy reference is not store
+
+// heap(non primitive) : all non primitive data store in this and value share by reference
+let userone={
+    name: "pream"
+}
+let usertwo=userone
+usertwo.name="aditya"
+console.log(userone) // aditya
+console.log(usertwo) // aditya 
+
+// as reference of both userone and usertwo is same and they are shared by reference 
