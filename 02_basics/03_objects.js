@@ -14,7 +14,7 @@
 //* 2. using constructure  , singleton object is formed (one of its type )
 
 //* to define a symbol
-const mySym=Symbol("Key1")// we have to initially declear it to use a symbol in a object 
+const mySym=Symbol("Key1")// we have to initially declear it to use a symbol in a object //* in symbols we dont have to use new 
 
 //* object literal (way of definfing object)
 const JsUser={
@@ -38,7 +38,6 @@ console.log(JsUser.email);//* less prefered
 console.log(JsUser["email"]);//* more preferd as always applicable
 //console.log(JsUser.fullName) //* it will show a error IF full and name as space in between 
 console.log(JsUser["full Name"]) //* now only this is correct 
-
 //* important interview question is take a symbol as key of a object and print it
 console.log(JsUser[mySym]);
 
@@ -52,7 +51,23 @@ console.log(JsUser[mySym]);
 JsUser.email="aditya@chatgpt.com"
 
 // to freez the object 
-Object.freeze(JsUser)
+//*Object.freeze(JsUser)
 JsUser.email="aditya@gmail.com"  //* in output email will be aditya@chatgpt.com
 console.log(JsUser);
+
+
+
+//*  in js function can be treated same as function not much difference between them 
+JsUser.greetings=function(){
+    //console.log(`hello ${JsUser.name}`);//* string interpolation
+
+    //* if same object ko reference karna hai to ham this ka use bhi kar sakte hai
+    console.log(`hello, ${this.name}`);
+    
+}
+
+
+
+//console.log(JsUser.greetings); we have to add a perntesis here as a function will not execute here it reference will return 
+console.log(JsUser.greetings());
 
