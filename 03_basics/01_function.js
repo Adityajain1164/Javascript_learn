@@ -4,6 +4,7 @@ console.log("h");
 console.log("j");
 console.log("k");*/
 
+
 const syaMyName= function(){ //* {} this is scope of function 
     console.log("h");
     console.log("j");
@@ -78,4 +79,66 @@ function userLoginMessagedefault(username="sam"){
     return `${username} just logged in`
 }
 console.log(userLoginMessagedefault()) //* sam just logged in
-console.log(userLoginMessagedefault("aditya")) //* aditya just logged inssfffff
+console.log(userLoginMessagedefault("aditya")) //* aditya just logged in
+
+
+
+
+
+//* lets understand how we can pass different type of parameters
+
+//* whene we are desining a shoping cart we dont know how many arguments are going to come and we have to add them continously 
+//* so you have to prepare your parameter without knowing how many argument will come 
+
+
+//* so for these case we use rest or spread operater which will give you a array of arrguments later you can apply a loop
+
+//function calculateCartPrice(...num1){ 
+function calculateCartPrice(val1,val2,...num1){     
+    return num1 // we have return the array of arrgument 
+    //* in second case it will return [500,800,2000]
+}
+
+console.log(calculateCartPrice(100,200,500,800,2000));
+
+
+
+
+
+
+//* lets see if object is a parameter 
+const user ={
+    name : "aditya",
+    price: 200
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.name} and price is ${anyobject.price}` )
+    //* we can not use 'this' we have to use anyobject because this is when aobject call it self not a function call itself 
+}
+handleObject(user);
+
+//* second way is that we can directily pass a object without defining it 
+handleObject({
+    name: "aditya",
+    price:233
+})
+
+
+
+
+
+
+//* let see how can we pass arrays in the function as a parameter 
+const myArray =[233,450,236]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+console.log(returnSecondValue(myArray));
+
+//* by not defining array priorly 
+console.log(returnSecondValue([233,254,69]));
+
+
+
