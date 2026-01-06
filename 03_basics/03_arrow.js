@@ -73,37 +73,6 @@ const namesame1=() =>({username:"aditya"}) //* correct way
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //* ************************************************* important understaning ***********************************************************************
 
 /*We write code to instruct hardware indirectly through software layers.
