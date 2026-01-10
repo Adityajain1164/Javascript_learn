@@ -28,7 +28,7 @@ function printMe (item){
 
 //* foreach function has acces of multiple parameter 
 coding.forEach((item,index,arr) => {
-    console.log(item,index,arr);
+    //console.log(item,index,arr);
     
 })
 
@@ -55,8 +55,23 @@ const myCoding = [
 ]
 
 myCoding.forEach((item) => {
-    console.log(item);//* now item is indivisual object 
+    //console.log(item);//* now item is indivisual object 
     
     //console.log(item.languageName); //* it will gave language name of every object
     
 });
+
+
+
+
+
+
+
+//* now let see we can store a loop in a varible or not 
+const value= myCoding.forEach((item) => {
+    return item 
+    
+});
+console.log(value); //* undefine 
+//* so we can not return from  a foreach loop but some time its very important to return when we are iterating on a array
+
