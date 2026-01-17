@@ -12,11 +12,84 @@ video 31 last part  -->
 <head>
     <meta charset="UTF-8">
     <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121 ;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-black">
-       <h1 class="heading">Dom learning</h1> 
+<body class="bg-black"> 
+    <div>
+       <h1 id ="title" class="heading">Dom learning <span style="display: none;">text test</span></h1> 
+       <h2>Lorem ipsum dolor sit amet.</h2>
+       <h2>Lorem ipsum dolor sit amet.</h2>
+       <h2>Lorem ipsum dolor sit amet.</h2>
        <p>Lorem ipsum dolor sit amet.</p>
+       <input type="password" name="aditya" >
+       <ul>
+            <li class="list">one</li>
+            <li class="list">two</li>
+            <li class="list">three</li>
+       </ul>
+
     </div>
 </body>
 </html>
+
+<!-- dom chart link
+https://excalidraw.com/#json=fOyGgh12S3EHzr_0fSbc7,nlOqvFsHRQGT-NtyFAAUZQ -->
+
+
+<!-- to select the specific element, we can get it from 
+document.getElementById("title")
+document.getElementByClass("Heading")
+now when we have element then we can get information about it 
+document.getElementById("title").id will give you id of that element 
+document.getElementByClass("Heading").className will give you class of the element *** here we cannot write class we have to write className because internal system of js understand className not class
+and we can also manapulate these id and class names and all 
+if we want to change the content we can use 
+document.getElementsById("title").innerText="aditya jain"
+we can store const title=document.getElementsById("title")
+and we can style this element 
+title.style.backgroundColor="red"
+title.style.borderRadius="10px"
+we can get the content of element from 
+title.innerText  this show the text which is visible only
+title.textContent this give us complete text inside a element
+title.innerHTML give us whole html value it support html tags also
+
+document.queryselector('h2') it will give us the first h2 of documnet 
+
+document.queryselector(#title)  to find according to id
+document.queryselector(.heading) to get element according to class
+
+people like queryselector very much because you can use css atribute in it all css selector we can use in it
+
+const myul=document.querySelector('ul') it will select whole unorder list
+const myli=myul.querySelector('li') this will store the the first li in ul 
+
+for selecting the other one we have to use querySelectAll()
+const items=myul.querySelectorAll('li')
+now for selecting two it is items[1] like this 
+
+now items is a nodelist and we can run loop and all on it 
+nodelist is not exactly same as arry but some kind of similar
+we can not do like items.style.backgroundColor='green' error
+we have to write items[1].style.backgroundColor='green'
+and if we want to green every item at one thime 
+items.style.backgroundColor='green' wrong we have to use the loop
+items.forEach((li)=>{               correct
+    l1.style.backgroundColor='green'
+})
+
+
+
+htmlCollection dont have forEach or any other loop so we have to convert it into array 
+const htmlcollection=document.querySelect('.list')
+const arraycollection=Array.from(htmlcollection)
+arraycollection.forEach((li)=>{
+    li.style.color='green'
+})
+
+ -->
