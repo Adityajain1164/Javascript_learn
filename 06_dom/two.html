@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+    </div>
+</body>
+<script>  //* in this tag , javascript can work not html
+    const parent=document.querySelector('.parent')
+    console.log(parent);                          <!-- //*parent did not give us html collection, parent.children will give->
+    console.log(parent.children);
+    console.log(parent.children[0].innerText);
+    
+    <!-- //*we can not apply forEach loop htmlcollection but normal for loop can be aplicalbe-->
+    const htmlcollection=parent.children
+    for (let index = 0; index < htmlcollection.length; index++) {
+        const element = htmlcollection[index].innerText;
+        console.log(element);
+        
+        
+    }
+    htmlcollection[0].style.color='green'
+
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+
+    const dayone=document.querySelector('.day')
+    // console.log(dayone);
+    // console.log(dayone.parentElement);
+    // console.log(dayone.nextElementSibling);
+    
+    //* very important
+    console.log("NODES: ", parent.childNodes);   //* to understad the complex DOM tree structure as it give a node list
+
+    
+    
+    
+</script>
+</html>
