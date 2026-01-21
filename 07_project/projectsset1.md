@@ -67,3 +67,24 @@ form.addEventListener('submit', (e) => {
   }
 });
 ```
+
+
+## project 3 
+
+```javascript
+const clock=document.getElementById('clock')
+
+// very important for interview 
+// we have to run the clock every time so we need a set interval event 
+// jab jab meri script chalti rhegi tab tak ek interval me ye bhi run hota rhega 
+// time in millisecond 
+
+setInterval(function(){
+  let date=new Date()
+  // console.log(date.toLocaleTimeString())
+  clock.innerHTML=date.toLocaleTimeString()
+
+},1000)
+
+
+```
